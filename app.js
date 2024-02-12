@@ -154,26 +154,7 @@ function pageTransition() {
     varName.innerText = "home"
     lightTransition.set(".loading-screen", {x: setStart})
   }
-  
-/*
-  xBeg = -loadingLeft - (loadingWidth - windowWidth) / 2
-  xEnd = -loadingLeft + windowWidth + (-loadingLeft - loadingWidth)
 
-  if(document.querySelector(".homepage")){
-    loadingWidth > 1000 ? skewX = -8 : skewX = -4
-    varName.innerText = "contact"
-  } else {
-    xBeg *= -1
-    if(!clickCount){
-      gsap.set(".loading-screen", {x: xEnd})
-      xBeg *= -1
-    }
-    loadingWidth > 1000 ? skewX = 8 : skewX = 4
-    xEnd = 0
-    varName.innerText = "home"
-  }
-  console.log(xBeg/windowWidth*100, xEnd/windowWidth*100)
-*/
   gsap.set(".loading-screen", { skewX: skewX })
   lightTransition.to(".loading-screen", { x: xBeg, skewX: 0, duration: 1.5, ease: "expo.inOut" })
     .set(".loading-screen", {autoAlpha: 1}, "<")
@@ -303,7 +284,7 @@ function introTextFunc() {
 
   introText.from(".line", { stagger: 0.1, xPercent: -120, opacity: 0, duration: 1.2, ease: "power2.inOut" })
   .from(".small-text-col h5", {yPercent: 10, duration: 0.8, opacity: 0, ease: "power2.inOut"}, "<+=0.8")
-  .from(".intro-text .chip", {stagger: 0.1, yPercent: 40, opacity: 0, duration: 1.2, ease: "power2.inOut"}, "<+=0.5")
+  .from(".intro-text .chip", {stagger: 0.1, yPercent: 40, opacity: 0, duration: 0.8, ease: "power2.inOut"}, "<+=0.5")
 }
 
 // ======== chip hover effect ======== //
