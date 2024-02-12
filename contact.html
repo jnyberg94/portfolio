@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Fjalla+One&display=swap" rel="stylesheet">
+    <title>Contact</title>
+</head>
+
+<body data-barba="wrapper">
+
+    
+    <div class="loading-screen">
+        <div class="page-name">
+            <div class="page-name-container">
+                <div class="dot"></div>
+                <h4 class="variable-name courier"></h4>
+            </div>
+        </div>
+    </div>
+
+    <div data-barba="container" data-barba-namespace="contact">
+
+        <section class="nav contact-nav">
+            <div class="nav-container">
+                <h4 class="logo-text fjalla">Kole Jain</h4>
+                <div class="link-container">
+                    <a href="/index.html">
+                        <h6 class="link axiforma unselected">home</h6>
+                    </a>
+                    <h6 class="slash axiforma"> / </h6>
+                    <div class="circle"></div>
+                    <a href="/contact.html">
+                        <h6 class="link axiforma">contact</h6>
+                    </a>
+                </div>
+    
+            </div>
+        </section>
+
+        <div class="pseudo-body contact">
+            <div class="viewport">
+                <main class="body-wrapper">
+
+                    <section class="contact-section">
+                        <h1 class="begin">Let's Begin</h1>
+                        <h4 class="subtext courier">A good project always starts with a good brief.</h4>
+                        <form novalidate id="form" method="post"
+                            action="https://script.google.com/macros/s/AKfycbxo2b8E9P3pNTp8qPP0RfjrUYPXOj5kUUeNWe5cq5gpJiX8MgLclGDMaX0og-e8jgwi/exec">
+                            <div class="input-container">
+                                <div class="label-container">
+                                    <label for="name-input" class="axiforma">Name *</label>
+                                    <h5 class="form-num courier">001</h5>
+                                </div>
+                                <div class="form-line"></div>
+
+                                <input class="field" id="name-input" placeholder="Jack Nyberg" type="text" name="name"
+                                    required>
+                                <div class="error-message">
+                                    <img src="Icons/alert-triangle.svg" alt="" class="error-icon small-icon">
+                                    <h6 class="error-text axiforma">Please fill out this field</h6>
+                                </div>
+                            </div>
+
+                            <div class="input-container">
+                                <div class="label-container">
+                                    <label for="email-input" class="axiforma">Email Address *</label>
+                                    <h5 class="form-num courier">002</h5>
+                                </div>
+                                <div class="form-line"></div>
+
+                                <input class="field" id="email-input" placeholder="Jacknyberg@gmail.com" type="text"
+                                    name="email" required>
+                                <div class="error-message">
+                                    <img src="Icons/alert-triangle.svg" alt="" class="error-icon small-icon">
+                                    <h6 class="error-text axiforma">Please fill out this field</h6>
+                                </div>
+                            </div>
+
+                            <div class="input-container">
+                                <div class="label-container">
+                                    <label for="location-input" class="axiforma">Location *</label>
+                                    <h5 class="form-num courier">003</h5>
+                                </div>
+                                <div class="form-line"></div>
+
+                                <input class="field" id="location-input" placeholder="Canada" type="text"
+                                    name="location" required>
+                                <div class="error-message">
+                                    <img src="Icons/alert-triangle.svg" alt="" class="error-icon small-icon">
+                                    <h6 class="error-text axiforma">Please fill out this field</h6>
+                                </div>
+                            </div>
+
+                            <div class="input-container">
+                                <div class="label-container">
+                                    <label for="services-input" class="axiforma">Services Needed *</label>
+                                    <h5 class="form-num courier">004</h5>
+                                </div>
+                                <div class="form-line"></div>
+
+                                <input class="field" id="services-input" placeholder="Web Design & Development"
+                                    type="text" name="services" required>
+                                <div class="error-message">
+                                    <img src="Icons/alert-triangle.svg" alt="" class="error-icon small-icon">
+                                    <h6 class="error-text axiforma">Please fill out this field</h6>
+                                </div>
+                            </div>
+
+                            <div class="input-container">
+                                <div class="label-container">
+                                    <label for="description-input" class="axiforma">Project Description</label>
+                                    <h5 class="form-num courier">005</h5>
+                                </div>
+                                <div class="form-line"></div>
+
+                                <textarea name="description" id="description-input" class="axiforma"
+                                    placeholder="Hi Kole, I need..."></textarea>
+                            </div>
+                        </form>
+
+                        <div class="chips-container">
+                            <a href="mailto:hello@kolejain.com" class="chip">
+                                <div class="chip-wipe"></div>
+                                <img src="Icons/send.svg" alt="" class="small-icon">
+                                <h6 class="email axiforma">hello@kolejain.com</h6>
+                            </a>
+                            <div class="chip">
+                                <div class="chip-wipe"></div>
+                                <img src="Icons/map-pin.svg" alt="" class="small-icon">
+                                <h6 class="place axiforma">Alberta, Canada</h6>
+                            </div>
+                            <div class="chip">
+                                <div class="chip-wipe"></div>
+                                <img src="Icons/clock.svg" alt="" class="small-icon">
+                                <h6 class="time axiforma">null</h6>
+                            </div>
+                        </div>
+
+                        <button type="submit" form="form" class="form-submit cta-btn">
+                            <div class="submit-inner">
+                                <h5 class="talk-soon axiforma">talk<br>soon</h5>
+                                <img src="Icons/Expand.svg" alt="" class="expand-icon">
+                                <div class="hover-background"></div>
+                            </div>
+                            <img src="Icons/Linked Path Group.svg" alt="" class="circle-text">
+                        </button>
+
+                    </section>
+
+                    <section class="footer">
+                        <div class="footer-line"></div>
+                        <div class="footer-container">
+                            <h5 class="year axiforma">© 2024</h5>
+                            <h4 class="note courier">TL;DR I make cool websites <span>;)</span></h4>
+                            <div class="links-container">
+                                <h5 class="slash axiforma">/</h5>
+                                <a href="/index.html">
+                                    <h5 class="links axiforma">home</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <h1 class="big-text">Kole Jain</h1>
+                    </section>
+
+                </main>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script defer src="app.js" type=""></script>
+</body>
+
+</html>

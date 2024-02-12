@@ -1,0 +1,134 @@
+@import "./baseStyles";
+
+@mixin absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero {
+    margin: 0 var(--sideMargin);
+    padding-top: var(--sideMargin);
+    position: relative;
+
+    .image-container {
+        position: relative;
+        overflow: hidden;
+        height: 70vh;
+    }
+
+    .scroll-cover {
+        @include absolute();
+        width: 100%;
+        height: 100%;
+        background-color: var(--primaryDark);
+        opacity: 0;
+        z-index: 2;
+    }
+
+    .reveal {
+        position: absolute;
+        top: 0;
+        width: 0%;
+        height: 100%;
+        background-color: var(--primaryLight);
+        z-index: 2
+    }
+
+    .silhouette {
+        position: absolute;
+        object-fit: contain;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 120%;
+        z-index: 1;
+        opacity: 0;
+    }
+
+    .background {
+        width: 100%;
+        height: 120%;
+        object-fit: cover;
+        object-position: center center;
+        opacity: 0;
+    }
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -15%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .subtext-container {
+        width: calc(100% - 40px);
+        margin: 0 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .transform-container {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        width: fit-content;
+    }
+
+    .left-text, .right-text {
+        white-space: nowrap;
+    }
+
+    .bigtext-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .overlay {
+        @include absolute();
+        z-index: 2;
+        color: var(--darkOverlay);
+    }
+
+    .letter {
+        display: inline-block;
+        background-position-x: 100%;
+        background-image: linear-gradient(-70deg,var(--primaryLight) 50%,var(--primaryLight12) 50%);
+        background-size: 300% 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @media screen and (max-width: 650px) {
+
+        .image-container {
+            height: 60vh;
+        }
+    
+        .text-container {
+           margin-top: -30%;
+        }
+    
+        .subtext-container {
+            justify-content: flex-start;
+        }
+        .transform-container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}
+
+
+
+@import "./nav";
+@import "./introText";
+@import "./selectedWorks";
+@import "./process";
+@import "./goodDesign";
+@import "./cta";
+@import "./footer";
+@import "./contactPage";
+@import "./transition";
