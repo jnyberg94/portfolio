@@ -284,7 +284,7 @@ function introTextFunc() {
 
   introText.from(".line", { stagger: 0.1, xPercent: -120, opacity: 0, duration: 1.2, ease: "power2.inOut" })
   .from(".small-text-col h5", {yPercent: 10, duration: 0.8, opacity: 0, ease: "power2.inOut"}, "<+=0.8")
-  .from(".intro-text .chip", {stagger: 0.1, yPercent: 40, opacity: 0, duration: 0.8, ease: "power2.inOut"}, "<+=0.5")
+  .from(".intro-text .chip", {stagger: 0.1, yPercent: 40, opacity: 0, duration: 0.7, ease: "power2.inOut"}, "<+=0.6")
 }
 
 // ======== chip hover effect ======== //
