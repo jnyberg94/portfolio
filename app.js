@@ -591,7 +591,7 @@ function formSubmit() {
       })
         .then(response => response.json())
         .then(() => {
-          window.open("index.html", "_self")
+          window.open("contact.html", "_self")
         })
     }
 
