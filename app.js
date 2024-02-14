@@ -208,7 +208,7 @@ function homeOnLoad() {
     .to(".transform-container", { width: "100%", duration: 0.8, ease: "expo.inOut" })
 
   heroAnim.play()
-  let duration = heroAnim.duration() * 1000 - 400
+  let duration = heroAnim.duration() * 1000 - 600
   
   if (i > 0) {
     heroAnim.progress(1)
