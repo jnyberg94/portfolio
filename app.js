@@ -192,7 +192,7 @@ function spanText(bigLinks) {
 }
 
 function homeOnLoad() {
-  const html = document.querySelector("html")
+  const body = document.querySelector("body")
   gsap.set(".transform-container", { yPercent: 150, opacity: 0 })
 
   heroAnim
@@ -214,7 +214,7 @@ function homeOnLoad() {
     heroAnim.progress(1)
   } else {
     setTimeout(() => {
-      html.classList.remove("fixed-position")
+      body.classList.remove("fixed-position")
   }, duration)
   }
 
