@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Fjalla+One&display=swap" rel="stylesheet">
+    <title>Youtube Resources</title>
+    <link rel="icon" type="image/x-icon" href="/Icons/favicon.png">
+</head>
+
+<body data-barba="wrapper">
+
+    <div data-barba="container" data-barba-namespace="resources">
+        <div class="pseudo-body resources">
+            <div class="viewport">
+                <main class="body-wrapper">
+                    <section class="title">
+                        <h1 class="resources">resources</h1>
+                        <h5 class="subtext courier">All produced by Kole Jain for your personal use</h5>
+                        <img src="/Images/Headshot.webp" alt="" class="photo">
+                    </section>
+
+                    <section class="sign-up">
+                        <div class="col" id="banner">
+
+                        </div>
+                        <div class="col" id="col2">
+                            <h2 class="grab fjalla">Grab Yours, Free</h2>
+                            <h6 class="no-spam courier">No spam, guaranteed.</h6>
+
+                            <div class="form-container">
+                                <form novalidate id="form" method="post"
+                                    action="https://script.google.com/macros/s/AKfycbwVi4JmkWTa_muIor3FbjmllcsHDcNIslGoyLMHHEKRO-iWJasGKrFAIPFikVGMl-QnVw/exec">
+
+                                    <div class="input-container">
+                                        <div class="label-container">
+                                            <label for="email-input" class="axiforma">Email Address *</label>
+                                            <h5 class="form-num courier">001</h5>
+                                        </div>
+                                        <div class="form-line"></div>
+
+                                        <input class="field" id="email-input" placeholder="Jacknyberg@gmail.com"
+                                            type="text" name="email" required>
+                                        <div class="error-message">
+                                            <img src="Icons/alert-triangle.svg" alt="" class="error-icon small-icon">
+                                            <h6 class="error-text axiforma">Please fill out this field</h6>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" id="videoId" name="video"><!--remember to change this back to hidden-->
+                                </form>
+
+                                <button type="submit" form="form" class="signup-button cta-btn">
+                                    <h5 class="button-text">let's<br>go!
+                                        <img src="Icons/arrow-up-right.svg" alt="" class="arrow small-icon">
+                                    </h5>
+                                    <div class="hover-background"></div>
+                                </button>
+                            </div>
+
+
+                        </div>
+                    </section>
+
+                    <section class="footer">
+                        <div class="footer-line"></div>
+                        <div class="footer-container">
+                            <h5 class="year axiforma">© 2024</h5>
+                            <h4 class="note courier">TL;DR I make cool websites <span>;)</span></h4>
+                            <div class="links-container">
+                                <h5 class="slash axiforma">/</h5>
+                                <a href="/index.html">
+                                    <h5 class="links axiforma">home</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <h1 class="big-text">Kole Jain</h1>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script defer src="app.js" type=""></script>
+</body>
+
+</html>
