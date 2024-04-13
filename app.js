@@ -614,8 +614,10 @@ function formSubmit() {
 
 function emailSubmit() {
   const form = document.querySelector("form")
+  const button = document.querySelector("button")
 
   form.addEventListener("submit", (e) => {
+    button.disabled = true
     e.preventDefault()
     if (fieldValidity()) {
       fetch(form.action, {
@@ -626,7 +628,8 @@ function emailSubmit() {
         .then(()=>{
           window.open("success.html", "_self")
         })
-    }
+    } else {
+      button.disabled = false
   })
 }
 
@@ -683,28 +686,6 @@ function imgUpdate() {
 
 }
 
-// ========= email click ========= //
-/*
-const formAnim = gsap.timeline({paused: true})
-function emailForm() {
-  const signUps = document.querySelectorAll(".sign-up")
-  const back = document.querySelector(".back-button")
-  const fadeItems = [".fade-container", ".col1", ".col2"]
-
-  formAnim.to(".signup", {y: "100%", duration: 1, ease: "expo.inOut"})
-  .to(fadeItems, {duration: 0.6, stagger: 0.2, opacity: 1})
-
-  signUps.forEach((signUp)=>{
-    signUp.addEventListener("click", ()=>{
-      formAnim.play()
-    })
-  })
-
-  back.addEventListener("click", ()=>{
-    formAnim.reverse()
-  })
-
-}*/
 
 // ========= footer hover ======= //
 function footer() {
