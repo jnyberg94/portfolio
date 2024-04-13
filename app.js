@@ -630,6 +630,7 @@ function emailSubmit() {
         })
     } else {
       button.disabled = false
+    }
   })
 }
 
