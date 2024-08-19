@@ -655,36 +655,19 @@ function input() {
 
 function imgUpdate() {
   if(mobileBreakpoint()){
-    console.log("true")
     const sideMargin = gsap.getProperty(".sign-up", "gap")
     const imgHeight = (window.innerWidth - 2 * sideMargin) * 9 / 16 + 60
     document.querySelector("#banner").style.minHeight = imgHeight + "px"
   }
   
-
-  // The URL to your deployed Google Apps Script
-  const scriptUrl = 'https://script.google.com/macros/s/AKfycbwxK3j0_Rt9Wc36LIVvlcWUp-97UTPoEQl9tge1lO58KupnkAKrra0sGeQ9CQeKBJsIng/exec';
   // Extract the 'video' query parameter
   const urlParams = new URLSearchParams(window.location.search);
   const videoId = urlParams.get('video');
   //set our hidden input to our video ID
   document.getElementById('videoId').value = videoId;
-  console.log(videoId)
 
-  // Fetch the data from Google Apps Script
-  fetch(scriptUrl, {
-    credentials: 'omit'
-  })
-    .then(response => response.json())
-    .then(data => {
-      const videoData = data.find(item => item.VideoID === videoId);
-      if (videoData) {
-        const bannerDiv = document.getElementById('banner');
-        bannerDiv.innerHTML = `<img src="${videoData.ImageURL}" alt="Banner">`;
-      }
-    })
-    .catch(error => console.error('Error fetching data:', error));
-
+  const bannerDiv = document.getElementById('banner');
+  bannerDiv.innerHTML = `<img src="youtube-thumbs/${videoId}.jpg" alt="Banner">`;
 }
 
 
