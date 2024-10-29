@@ -612,12 +612,24 @@ function formSubmit() {
   })
 }
 
+
 function emailSubmit() {
   const form = document.querySelector("form")
   const button = document.querySelector("button")
+  const text = document.querySelector(".button-text")
+  const star = document.querySelector(".loading-star")
+  const loadingAnim = gsap.timeline({paused: true})
+  const loadingEnd = gsap.timeline({paused: true})
+
+  loadingAnim.from(star, {scale: 0, rotation: -180, duration: 1, ease: "expo.inOut"})
+  .to(".button-text", {opacity: 0, duration: 1}, "<")
+  .to(star, {rotation: 90, duration: 1, ease: "expo.inOut", repeat: -1})
+
 
   form.addEventListener("submit", (e) => {
+    loadingAnim.play()
     button.disabled = true
+
     e.preventDefault()
     if (fieldValidity()) {
       fetch(form.action, {
@@ -625,14 +637,19 @@ function emailSubmit() {
         body: new FormData(form)
       })
         .then(response => response.json())
-        .then(()=>{
+        .then(() => {
           window.open("success.html", "_self")
         })
     } else {
       button.disabled = false
+      loadingAnim.reverse()
     }
+
+
   })
 }
+
+
 
 // ======= input dimming ======= //
 
