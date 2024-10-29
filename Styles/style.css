@@ -1588,6 +1588,14 @@ body {
   }
 }
 
+.sign-up .loading-star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
 .success-body {
   background-color: var(--primaryLight);
 }
